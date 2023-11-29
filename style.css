@@ -1,0 +1,25 @@
+body{
+    background:rgb(88, 88, 238);
+}
+img{
+    width:250px;
+}
+.galeri, .galeri2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+    column-gap: 50px;
+    margin-bottom: 25px;
+}
+.galeri img:hover{
+    width:500px;
+}
+.galeri2 img:hover{
+    width:600px;
+}
+.galeri img, .galeri2 img {
+    transition: all 1000ms ease-in-out 900ms;
+}
+a{
+    color: gold;
+}
