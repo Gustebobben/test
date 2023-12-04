@@ -25,21 +25,31 @@
 	-->
 
   <body>
-    <a href="../index.html">klocke</a>
+    
     <!-- spillbrett starter her -->
     <div class="grid">
-      <canvas id="board" class="game-board"> </canvas>
-      <div class="right-column">
-        <div>
-          <h1>Tetris</h1>
-          <p>Score: <span>0</span></p>
-          <p>Lines: <span>0</span></p>
-          <p>Level: <span>0</span></p>
-          <canvas id="next" class="next"> </canvas>
+            <canvas id="board" class="game-board"></canvas>
+            <div class="right-column">
+                <div>
+                    <a href="https://www.galv.no/">hjem</a>
+                    <h1>Tetris</h1>
+                    <p>
+                        Score:<span id="score">0</span>
+                    </p>
+                    <p>
+                        Lines:<span id="lines">0</span>
+                    </p>
+                    <p>
+                        Level:<span id="level">0</span>
+                    </p>
+                    <p>
+                        Highscore:<span id="highscore">0</span>
+                    </p>
+                    <canvas id="next" class="next"></canvas>
+                </div>
+                <button id="play" class="play-button">play</button>
+            </div>
         </div>
-        <button id="play" class="play-button">play</button>
-      </div>
-    </div>
     <!-- spillbrett slutter her -->
     <script src="./src/main.js"></script>
   </body>
