@@ -1,9 +1,21 @@
-.body{
+h1{
+    text-align: center;
+}
+.boxen{
     display: flex;
 }
-.h1{
-    
+.Box_1{
+    align-self: center;
+    width: fit-content;
+    border: 3px solid #73AD21;
 }
-.p{
-    font-size: large;
+.Box_2{
+    align-self: center;
+    width: fit-content;
+    border: 3px solid #73AD21;
+}
+.Box_3{
+    align-self: center;
+    width: fit-content;
+    border: 3px solid #73AD21;
 }
