@@ -7,9 +7,10 @@ h1 {
 }
 .boxen > div {
     align-self: center;
-    width: fit-content;
+    width: 22rem;
+    height: 10rem;
     border: 3px solid #73AD21;
-    margin: auto;
+    margin: 2rem;
 }
 /*.Box_1 {
     align-self: center;
