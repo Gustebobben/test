@@ -1,9 +1,11 @@
-h1 {
-    text-align: center;
-}
 .boxen {
     display: flex;
-    
+    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+body {
+    text-align: center;
 }
 .boxen > div {
     align-self: center;
