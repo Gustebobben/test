@@ -1,5 +1,4 @@
 const birthDate = new Date('2007-05-16');
-        
 function updateAge() {
     const currentDate = new Date();
     const ageInMilliseconds = currentDate - birthDate;

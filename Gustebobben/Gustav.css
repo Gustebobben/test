@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: space-around;
 }
-body {
+.hovud {
     text-align: center;
 }
 .boxen > div {
@@ -14,18 +14,6 @@ body {
     border: 3px solid #73AD21;
     margin: 2rem;
 }
-/*.Box_1 {
-    align-self: center;
-    width: fit-content;
-    border: 3px solid #73AD21;
+.filma > h1 {
+    text-align: center;
 }
-.Box_2 {
-    align-self: center;
-    width: fit-content;
-    border: 3px solid #73AD21;
-}
-.Box_3 {
-    align-self: center;
-    width: fit-content;
-    border: 3px solid #73AD21;
-}*/
