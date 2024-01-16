@@ -1,0 +1,10 @@
+(def birth-date (java.util.Date. 2007 4 16))
+
+(defn update-age []
+  (let [current-date (java.util.Date.)
+        age-in-milliseconds (- current-date birth-date)
+        age-in-years (/ age-in-milliseconds (* 1000 60 60 24 365.25))]
+    (set! (.-textContent (js/document.getElementById "ageDisplay")) (str (format "%.10f" age-in-years)))))
+
+(update-age)
+(setInterval #(update-age) 1)

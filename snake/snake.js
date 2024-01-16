@@ -1,8 +1,30 @@
 const gameBoard = document.getElementById('game-board');
-let snake = [{x: 10, y: 10}];
-let food = {x: 200, y: 200};
+var segment=[]
+let snake = {
+  x: 10,
+  y: 10
+};
+let food = {
+  x: getRandomInt(390) + 10,
+  y: getRandomInt(390) + 10
+};
 let direction = 'right';
-let newHead = {x: snake[0].x, y: snake[0].y};
+let maxage = 1
+let newHead = {
+  age: maxage,
+  x: snake[0].x,
+  y: snake[0].y
+};
+segment.push(newHead);
+var segment = []
+const playButton = document.getElementById("play");
+console.log(segment)
+console.log(snake)
+
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
 
 function drawSnake() {
   for (let i = 0; i < snake.length; i++) {
@@ -24,7 +46,7 @@ function drawFood() {
 
 function moveSnake() {
   // fjern den siste delen av slangen
-  snake.pop();
+  //snake.pop();
 
   // legg til en ny del på riktig sted
   //FIXME
@@ -86,11 +108,11 @@ function gameLoop() {
 //start spillet
 drawSnake();
 drawFood();
-//FIXME
+
 const intervalId = setInterval(gameLoop, 100);
 
 // lytt til piltastene for å endre retning
-document.addEventListener('keydown', event => {
+document.addEventListener('keyup', event => {
   if (event.ArrowRight && direction !== 'left') {
     direction = 'right';
   } else if (event.ArrowLeft && direction !== 'right') {
