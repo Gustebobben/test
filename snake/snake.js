@@ -1,22 +1,22 @@
 const gameBoard = document.getElementById('game-board');
 var segment=[]
-let snake = {
+var snake = [{
   x: 10,
   y: 10
-};
+}];
 let food = {
-  x: getRandomInt(390) + 10,
-  y: getRandomInt(390) + 10
+  x: (getRandomInt(40) + 1) * 10,
+  y: (getRandomInt(40) + 1) * 10
 };
 let direction = 'right';
 let maxage = 1
-let newHead = {
-  age: maxage,
-  x: snake[0].x,
-  y: snake[0].y
-};
+if (snake > 0 && snake.length > 0){
+  var newHead = {
+    x: snake[0].x,
+    y: snake[0].y
+  };
+}
 segment.push(newHead);
-var segment = []
 const playButton = document.getElementById("play");
 console.log(segment)
 console.log(snake)
@@ -30,7 +30,7 @@ function drawSnake() {
   for (let i = 0; i < snake.length; i++) {
     const snakeElement = document.createElement('div');
     snakeElement.classList.add('snake');
-    snakeElement.style.left = snake[i].x + 'px';
+    snakeElement.style.left = snake[i].x + 'px';//ERROR
     snakeElement.style.top = snake[i].y + 'px';
     gameBoard.appendChild(snakeElement);
   }
@@ -46,13 +46,17 @@ function drawFood() {
 
 function moveSnake() {
   // fjern den siste delen av slangen
-  //snake.pop();
+  segment.pop();
 
   // legg til en ny del på riktig sted
-  //FIXME
-  newHead = {x: snake[0].x, y: snake[0].y};
+  if (snake > 0 && snake.length > 0){
+    newHead = {
+      x: snake[0].x, 
+      y: snake[0].y
+    };
+  }//
   if (direction === 'right') {
-    newHead.x += 10;
+    newHead.x += 10;//ERROR:Uncaught TypeError: Cannot read properties of undefined (reading 'x')
   } else if (direction === 'left') {
     newHead.x -= 10;
   } else if (direction === 'up') {
@@ -65,7 +69,7 @@ function moveSnake() {
 
 function checkCollision() {
   // sjekk om slangen treffer kanten av brettet
-  if (snake[0].x < 0 || snake[0].x >= gameBoard.offsetWidth || snake[0].y < 0 || snake[0].y >= gameBoard.offsetHeight) {
+  if (snake[0].x < 0 || snake[0].x >= gameBoard.offsetWidth || snake[0].y < 0 || snake[0].y >= gameBoard.offsetHeight) {//ERROR
     return true;
   }
 
