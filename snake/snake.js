@@ -1,6 +1,6 @@
 const gameBoard = document.getElementById('game-board');
 var segment=[]
-let snake = {
+var snake = {
   x: 10,
   y: 10
 };
@@ -10,10 +10,10 @@ let food = {
 };
 let direction = 'right';
 let maxage = 1
-let newHead = {
+var newHead = {
   age: maxage,
-  x: snake[0].x,
-  y: snake[0].y
+  y: snake[0].y,
+  x: snake[0].x
 };
 segment.push(newHead);
 var segment = []
@@ -21,6 +21,7 @@ const playButton = document.getElementById("play");
 console.log(segment)
 console.log(snake)
 
+console.log(KeyboardEvent)
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
