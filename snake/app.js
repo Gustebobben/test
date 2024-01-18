@@ -4,14 +4,14 @@ var ctx = canvas.getContext("2d");
 //ctx.fillStyle="blue"
 //ctx.clearRect(0,0,canvas.width,canvas.height);
 var count = 0
-var grid = 16
+var grid = 15
 var snake = {
-    x:100,
-    y:100,
+    x:105,
+    y:105,
     dx:grid,
     dy:0,
     cells:[],
-    maxCells:20,
+    maxCells:25,
 }
 console.log(snake)
 var food = {
